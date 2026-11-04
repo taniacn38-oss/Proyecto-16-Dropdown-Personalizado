@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fdf2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dropdown-wrapper {
+  background-color: #ffffff;
+  width: 360px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(244, 114, 182, 0.15);
+}
+
+.dropdown-wrapper h2 {
+  color: #1f2937;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-header {
+  background-color: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.dropdown-header:hover {
+  border-color: #db2777;
+}
+
+.arrow {
+  font-size: 0.9rem;
+  color: #6b7280;
+  transition: transform 0.3s ease;
+}
+
+/* Estado abierto: rota la flecha y cambia el borde */
+.custom-dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+.custom-dropdown.open .dropdown-header {
+  border-color: #db2777;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Estado abierto: muestra la lista de opciones */
+.custom-dropdown.open .dropdown-list {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  color: #374151;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+
+/* Estado seleccionado: resalta el elemento elegido dentro de la lista */
+.dropdown-item.selected {
+  background-color: #fbcfe8;
+  color: #be185d;
+  font-weight: 600;
+}
