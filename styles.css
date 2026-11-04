@@ -104,3 +104,40 @@ body {
   color: #be185d;
   font-weight: 600;
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.card, 
+.task-container, 
+.accordion-container, 
+.dropdown-wrapper, 
+.flashcard-wrapper,
+.hero-card {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .card, 
+  .task-container, 
+  .accordion-container, 
+  .dropdown-wrapper, 
+  .flashcard-wrapper {
+    padding: 20px;
+  }
+}
